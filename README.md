@@ -1,4 +1,4 @@
-# Wildlife Tracker
+# Lessons
 
 [Anna Valkov](http://github.com/aavalkov) 
 August 22, 2014
