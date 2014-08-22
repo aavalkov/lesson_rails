@@ -5,9 +5,12 @@
 	<h2><%= @lesson.number %>. <%= @lesson.name%></h2>
 
 	<p><%= @lesson.information%> </p>
-
-	<a href = "/lessons/edit/<%= @lesson.id%>" class = "btn btn-info btn-sm">Edit</a>
+	<br>
+	<br>
 	<a href = "/lessons/" class = "btn btn-info btn-sm">Main Menu</a>
-
-
+	<a href = "/lessons/edit/<%= @lesson.id%>" class = "btn btn-warning btn-sm">Edit Lesson</a>
+	<% if @lesson.next != nil  %>
+		<a href ="/lessons/<%=@lesson.next.id%>" class="btn btn-info btn-sm">
+		Next Lesson</a>
+	<% end %>	
 </div>
