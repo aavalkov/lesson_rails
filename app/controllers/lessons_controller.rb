@@ -5,6 +5,7 @@ class LessonsController < ApplicationController
 	end
 
 	def new
+		@lesson = Lesson.new
 		render ('lessons/new.html.erb')
 	end
 
