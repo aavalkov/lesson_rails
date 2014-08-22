@@ -1,0 +1,23 @@
+<div class='container'>
+
+	<h1>Lessons</h1>
+	<h2>New Lesson</h2>
+
+	<% if @lesson.errors.any? %>
+		<h3>Please fix these errors and resubmit:</h3>
+		<ul>
+			<% @lesson.errors.full_messages.each do |message|%>
+				<li><strong><%= message %></strong></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<form class = "form-inline" action ="/lessons" method="post">
+		<label for ="lesson_name"></label>
+		<input class = "form-control" id ="lesson_name" name ="name" placeholder= "Lesson Name" type = "text">
+		<label for ="lesson_information"></label>
+		<input class = "form-control" id ="lesson_infomration" placeholder= "Lesson Information"name = "information" type ="text">
+		<button class="btn btn-success">Create Lesson</button>
+	</form>
+
+</div>
