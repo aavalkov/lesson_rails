@@ -1,0 +1,17 @@
+<div class='container'>
+
+	<h1>Lessons</h1>
+	<h3>Edit name or information for <%= @lesson.name%> : </h3>
+	<form class = "form-inline" action="/lessons/<%= @lesson.id%>" method="post">
+		<input name ="_method" type="hidden" value="patch">
+		<label for ="lesson_name"></label>
+		<input class = "form-control" id ="lesson_name" name ="name" value= "<%= @lesson.name %>" type = "text">
+		<label for ="lesson_information"></label>
+		<input class = "form-control" id ="lesson_infomration" value= "<%= @lesson.information %>" name = "information" type ="text">
+		<button class="btn btn-warning btn-sm">UPDATE</button>
+	</form>
+	<p><a href="/lessons/<%= @lesson.id %>" class='btn btn-delete btn-sm'
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">DELETE</a></p>
+</div>

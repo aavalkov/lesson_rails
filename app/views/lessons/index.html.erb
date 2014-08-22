@@ -3,8 +3,7 @@
 
 	<ul>
 		<% @lessons.each do |lesson| %>
-			<li><strong><%= lesson.name %></strong></li>
-			<li><%= lesson.information %></li>
+			<li><strong><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></strong></li>
 		<% end %>
 	</ul>
 </div>

@@ -21,4 +21,21 @@ class LessonsController < ApplicationController
 		@lesson = Lesson.find(params[:id])
 		render('lessons/show.html.erb')
 	end
+
+	def edit
+		@lesson = Lesson.find(params[:id])
+		render('lessons/edit.html.erb')
+	end
+
+	def update
+		@lesson = Lesson.find(params[:id])
+		@lesson.update(:name => params[:name], :information => params[:information])
+		redirect_to("/lessons/#{@lesson.id}")
+	end
+
+	def destroy
+		@lesson = Lesson.find(params[:id])
+		@lesson.destroy
+		redirect_to("/lessons")
+	end
 end
