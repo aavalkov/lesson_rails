@@ -9,8 +9,14 @@
 	<br>
 	<a href = "/lessons/" class = "btn btn-info btn-sm">Main Menu</a>
 	<a href = "/lessons/edit/<%= @lesson.id%>" class = "btn btn-warning btn-sm">Edit Lesson</a>
+	
+	<% if @lesson.prev != nil %>
+		<a href ="/lessons/<%=@lesson.prev.id%>" class = "btn btn-info btn-sm"> Previous Lesson</a>
+	<% end %>	
+
 	<% if @lesson.next != nil  %>
 		<a href ="/lessons/<%=@lesson.next.id%>" class="btn btn-info btn-sm">
 		Next Lesson</a>
 	<% end %>	
+
 </div>

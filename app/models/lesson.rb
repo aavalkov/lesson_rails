@@ -7,4 +7,8 @@ class Lesson < ActiveRecord::Base
  		Lesson.find_by(number: self.number+1)
  	end
 
+ 	def prev
+ 		Lesson.find_by(number: self.number-1)
+ 	end
+
 end
