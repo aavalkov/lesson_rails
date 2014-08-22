@@ -1,11 +1,11 @@
 <div class='container'>
 	<h1>Lessons</h1>
 
-	<ul>
+	<dl>
 		<% @lessons.each do |lesson| %>
-			<li><strong><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></strong></li>
+			<dt><strong><a href="/lessons/<%= lesson.id %>"><%= lesson.number%>. <%= lesson.name %></a></strong></dt>
 		<% end %>
-	</ul>
+	</dl>
 
 	<a href ='/lessons/new' class = "btn btn-success">Add Lesson</a>
 </div>
